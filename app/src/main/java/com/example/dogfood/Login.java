@@ -27,6 +27,7 @@ public class Login extends AppCompatActivity {
 
         // Initialize views
         usernameEditText = findViewById(R.id.etUsername);
+
         passwordEditText = findViewById(R.id.etPassword);
         loginButton = findViewById(R.id.btnLogin);
         forgetPasswordButton = findViewById(R.id.btnForgetPassword);

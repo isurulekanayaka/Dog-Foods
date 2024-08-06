@@ -45,6 +45,7 @@ public class Signup extends AppCompatActivity {
             public void onClick(View v) {
                 String emailOrPhone = emailOrPhoneEditText.getText().toString().trim();
                 String fullName = fullNameEditText.getText().toString().trim();
+
                 String username = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 

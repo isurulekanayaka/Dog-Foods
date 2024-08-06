@@ -15,6 +15,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "DogFood.db";
     private static final int DATABASE_VERSION = 2; // Increment the version to trigger onUpgrade
 
+
     // Table and column names
     private static final String TABLE_USERS = "users";
     private static final String COLUMN_ID = "id";
@@ -78,6 +79,7 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USERNAME, username.trim());
         values.put(COLUMN_PASSWORD, password.trim());
         values.put(COLUMN_ROLE, "user"); // Set role as 'user'
+
 
         // Insert row
         long result = db.insert(TABLE_USERS, null, values);
