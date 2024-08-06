@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminOrder">
+    tools:context=".AdminSetting">
 
-    <!-- First LinearLayout for Image and Label -->
     <LinearLayout
         android:id="@+id/linearLayoutTop"
         android:layout_width="0dp"
@@ -17,16 +16,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.1">
+        app:layout_constraintVertical_bias="0.2">
 
         <!-- ImageView inside the top LinearLayout -->
         <ImageView
             android:id="@+id/imageViewAdmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:background="@drawable/rounded_corners"
-            android:src="@drawable/adminprofile"/>
+            android:src="@drawable/adminprofile"
+            android:layout_gravity="center"/>
 
         <!-- TextView inside the top LinearLayout -->
         <TextView
@@ -38,8 +37,15 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"/>
-
     </LinearLayout>
+
+    <!-- Guideline to add gap between sections -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineGap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="64dp"/> <!-- Adjust gap as needed -->
 
     <!-- Second LinearLayout for Buttons -->
     <LinearLayout
@@ -48,49 +54,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutTop"
+        app:layout_constraintTop_toBottomOf="@id/guidelineGap"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintVertical_bias="0.8">
 
         <Button
-            android:id="@+id/btnViewOrders"
+            android:id="@+id/btnChangePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Orders"
-            android:layout_marginTop="8dp"/>
+            android:text="Change Password"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4472C4"
+            android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/btnUpdatePrices"
+            android:id="@+id/btnLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Prices"
-            android:layout_marginTop="8dp"/>
-
-        <Button
-            android:id="@+id/btnAddProducts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Products"
-            android:layout_marginTop="8dp"/>
-
-        <Button
-            android:id="@+id/btnAddNewAdministrators"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add New Administrators"
-            android:layout_marginTop="8dp"/>
-
+            android:text="Logout"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4472C4"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
-
-    <!-- Guideline for gap spacing -->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineGap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="64dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
