@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminOrder">
+    tools:context=".AdminOrder"
+    android:background="#4898e0">
 
     <!-- First LinearLayout for Image and Label -->
     <LinearLayout
@@ -22,8 +23,8 @@
         <!-- ImageView inside the top LinearLayout -->
         <ImageView
             android:id="@+id/imageViewAdmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:background="@drawable/rounded_corners"
             android:src="@drawable/adminprofile"/>
@@ -60,28 +61,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Orders"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnUpdatePrices"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update Prices"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnAddProducts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Products"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnAddNewAdministrators"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add New Administrators"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
     </LinearLayout>
 
