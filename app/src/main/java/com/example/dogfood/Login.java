@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+// Login.java
 public class Login extends AppCompatActivity {
 
     private EditText usernameEditText;
@@ -27,7 +29,6 @@ public class Login extends AppCompatActivity {
 
         // Initialize views
         usernameEditText = findViewById(R.id.etUsername);
-
         passwordEditText = findViewById(R.id.etPassword);
         loginButton = findViewById(R.id.btnLogin);
         forgetPasswordButton = findViewById(R.id.btnForgetPassword);
@@ -61,8 +62,14 @@ public class Login extends AppCompatActivity {
             Log.d("LoginActivity", "Authentication Result: " + isAuthenticated);
 
             if (isAuthenticated) {
-                Intent intent = new Intent(Login.this, SelectCategory.class);
-                startActivity(intent);
+                // Check if the user is an admin
+                if (dbHelper.isAdmin(username)) {
+                    Intent intent = new Intent(Login.this, AdminSetting.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(Login.this, SelectCategory.class);
+                    startActivity(intent);
+                }
                 finish(); // Optional: finish the login activity
             } else {
                 Toast.makeText(Login.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
@@ -75,3 +82,6 @@ public class Login extends AppCompatActivity {
         });
     }
 }
+
+
+
