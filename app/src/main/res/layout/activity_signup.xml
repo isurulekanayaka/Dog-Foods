@@ -92,18 +92,17 @@
             android:textColor="#FFFFFF"/>
 
         <TextView
-            android:id="@+id/have_account"
-            android:layout_width="match_parent"
+            android:id="@+id/tvSignUpPrompt"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:text="Don't have an account? Sign Up"
+            android:textColor="@color/button_text_color"
             android:gravity="center"
-            android:text="Have an account? Login"
-            android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="@color/white"
-            android:autoLink="web"
-            android:linksClickable="true"
-            android:textColorLink="@color/white"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
 
         <TextView
             android:id="@+id/permission_message"
