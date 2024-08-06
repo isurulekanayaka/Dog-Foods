@@ -10,7 +10,7 @@
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:src="@drawable/dogfood1"
+        android:src="@drawable/dogfood3"
         android:scaleType="centerCrop"
         android:background="@drawable/rounded_corners"
         android:clipToOutline="true" />
@@ -22,7 +22,7 @@
         android:layout_below="@id/product_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Wet Dog Food\n(Canned)"
+        android:text="Puppy Food"
         android:gravity="center"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
@@ -36,7 +36,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:padding="16dp"
-        android:text="Wet dog food, often referred to as supplements, is a popular choice for many pet owners due to its high moisture content, palatability, and variety of flavors and textures."
+        android:text="Wet dog food, often referred to as puppy dog food, is a popular choice for many pet owners due to its high moisture content, palatability, and variety of flavors and textures. "
         android:textColor="#FFFFFF"
         android:gravity="center"
         android:textSize="18sp" />
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
-            android:text="RS 7500.00"
+            android:text="RS 2500.00"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="135dp"
-            android:text="Nutri-Vent"
+            android:text="Cesar"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
