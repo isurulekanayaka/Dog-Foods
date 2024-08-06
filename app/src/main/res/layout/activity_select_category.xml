@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectCategory">
+
+    <!-- LinearLayout to contain the buttons -->
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5">
+
+        <Button
+            android:id="@+id/btnWetDogFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Wet Dog Food (Canned)"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnKibblesAndBits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Kibbles and Bits"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnPuppyFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Puppy Food"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnSupplements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Supplements"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnFreezeDriedDogFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Freeze-Dried Dog Food"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnRawDogFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Raw Dog Food"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
