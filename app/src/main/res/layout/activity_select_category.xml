@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectCategory">
+    tools:context=".SelectCategory"
+    android:background="#4898e0">
 
     <!-- LinearLayout to contain the buttons -->
     <LinearLayout
@@ -24,61 +25,67 @@
             android:id="@+id/btnWetDogFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Wet Dog Food (Canned)"
             android:textSize="20sp"
             android:padding="16dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnKibblesAndBits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Kibbles and Bits"
             android:textSize="20sp"
             android:padding="16dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnPuppyFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Puppy Food"
             android:textSize="20sp"
             android:padding="16dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnSupplements"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Supplements"
             android:textSize="20sp"
             android:padding="16dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnFreezeDriedDogFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Freeze-Dried Dog Food"
             android:textSize="20sp"
             android:padding="16dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnRawDogFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Raw Dog Food"
             android:textSize="20sp"
             android:padding="16dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
     </LinearLayout>
 

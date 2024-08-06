@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminSetting">
+    tools:context=".AdminSetting"
+    android:background="#4898e0">
 
     <LinearLayout
         android:id="@+id/linearLayoutTop"
@@ -67,8 +68,8 @@
             android:layout_height="wrap_content"
             android:text="Change Password"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#4472C4"
-            android:textColor="#FFFFFF" />
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000"/>
 
         <Button
             android:id="@+id/btnLogout"
@@ -76,8 +77,8 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#4472C4"
-            android:textColor="#FFFFFF" />
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF000000" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
