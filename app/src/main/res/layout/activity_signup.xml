@@ -87,6 +87,7 @@
             android:layout_marginTop="25dp"
             android:text="Sign Up"
             android:textStyle="bold"
+            android:backgroundTint="#4472C4"
             android:textSize="25sp"
             android:background="@drawable/button" />
 
