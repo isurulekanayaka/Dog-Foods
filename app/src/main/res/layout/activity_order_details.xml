@@ -23,6 +23,7 @@
 
         <!-- Table Layout -->
         <TableLayout
+            android:id="@+id/order_table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:stretchColumns="1">
@@ -37,7 +38,7 @@
                     android:background="#FFFFFF"
                     android:layout_margin="1dip"/>
                 <TextView
-                    android:text="Product ID"
+                    android:text="Product Type"
                     android:padding="3dip"
                     android:textStyle="bold"
                     android:background="#FFFFFF"
@@ -55,101 +56,9 @@
                     android:background="#FFFFFF"
                     android:layout_margin="1dip"/>
                 <TextView
-                    android:text="Date"
+                    android:text="Name"
                     android:padding="3dip"
                     android:textStyle="bold"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Price"
-                    android:padding="3dip"
-                    android:textStyle="bold"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Status"
-                    android:padding="3dip"
-                    android:textStyle="bold"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-            </TableRow>
-
-            <!-- Second Row -->
-            <TableRow
-                android:background="#000000">
-                <TextView
-                    android:text="Item 8"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 9"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 10"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 11"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 12"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 13"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 14"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-            </TableRow>
-
-            <!-- Third Row -->
-            <TableRow
-                android:background="#000000">
-                <TextView
-                    android:text="Item 15"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 16"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 17"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 18"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 19"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 20"
-                    android:padding="3dip"
-                    android:background="#FFFFFF"
-                    android:layout_margin="1dip"/>
-                <TextView
-                    android:text="Item 21"
-                    android:padding="3dip"
                     android:background="#FFFFFF"
                     android:layout_margin="1dip"/>
             </TableRow>
