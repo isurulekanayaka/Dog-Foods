@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signup"
+    tools:context=".AdminRegister"
     android:orientation="vertical"
     android:background="#4898e0">
 
@@ -17,19 +17,19 @@
         android:gravity="center_horizontal">
 
         <TextView
-            android:id="@+id/lblHeadline"
+            android:id="@+id/lblAdminHeadline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="DOG\nFOOD"
+            android:text="ADMIN\nREGISTER"
             android:textSize="50sp"
             android:textStyle="bold"
             android:textColor="@color/black" />
 
         <EditText
-            android:id="@+id/email_or_phone"
+            android:id="@+id/email_or_phone_admin"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="23dp"
@@ -40,7 +40,7 @@
             android:background="@drawable/forget" />
 
         <EditText
-            android:id="@+id/fullname"
+            android:id="@+id/fullname_admin"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="23dp"
@@ -51,7 +51,7 @@
             android:background="@drawable/forget" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/username_admin"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="23dp"
@@ -62,7 +62,7 @@
             android:background="@drawable/forget" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_admin"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="23dp"
@@ -74,38 +74,39 @@
             android:inputType="textPassword" />
 
         <ProgressBar
-            android:id="@+id/LProgressBar"
+            android:id="@+id/LProgressBarAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:layout_gravity="center" />
 
         <Button
-            android:id="@+id/btnSignup"
+            android:id="@+id/btnAdminSignup"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
-            android:text="Sign Up"
+            android:text="Register"
             android:textStyle="bold"
             android:textSize="25sp"
             android:backgroundTint="#4472C4"
             android:textColor="#FFFFFF"/>
 
         <TextView
-            android:id="@+id/tvSignUpPrompt"
-            android:layout_width="wrap_content"
+            android:id="@+id/have_account_admin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Don't have an account? Sign Up"
-            android:textColor="@color/button_text_color"
+            android:layout_marginTop="20dp"
             android:gravity="center"
+            android:text="Have an account? Login"
+            android:textStyle="bold"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
+            android:textColor="@color/white"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textColorLink="@color/white"/>
 
         <TextView
-            android:id="@+id/permission_message"
+            android:id="@+id/permission_message_admin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
@@ -116,7 +117,7 @@
             android:textColor="@color/white"/>
 
         <TextView
-            android:id="@+id/learn_more"
+            android:id="@+id/learn_more_admin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

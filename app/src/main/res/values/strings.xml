@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dog Food</string>
+    <string name="title_activity_new">NewActivity</string>
 </resources>
