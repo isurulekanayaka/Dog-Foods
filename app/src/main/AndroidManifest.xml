@@ -13,6 +13,10 @@
         android:theme="@style/Theme.DogFood"
         tools:targetApi="31">
         <activity
+
+            android:name=".PlaceOrderRawDogFood"
+            android:exported="false" />
+<activity
             android:name=".AdminRegister"
             android:exported="false" >
 <!--            <intent-filter>-->
@@ -21,8 +25,24 @@
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
         </activity>
+
         <activity
-            android:name=".AddProduct"
+            android:name=".PlaceOrderFreezeDriedDogFood"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderSupplements"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderPuppyFood"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderKibblesandBits"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderWetDogFood"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRegister"
             android:exported="false">
 
             <!-- <intent-filter> -->
@@ -31,6 +51,15 @@
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".AddProduct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".OrderDetails"
@@ -78,11 +107,13 @@
         <activity
             android:name=".Signup"
             android:exported="false">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".MainActivity"
