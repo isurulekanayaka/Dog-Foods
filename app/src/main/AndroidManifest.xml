@@ -13,6 +13,7 @@
         android:theme="@style/Theme.DogFood"
         tools:targetApi="31">
         <activity
+]
             android:name=".NewActivity"
             android:exported="false"
             android:label="@string/title_activity_new"
@@ -20,6 +21,38 @@
         <!-- Activities -->
         <activity
             android:name=".MainActivity"
+
+
+            android:name=".PlaceOrderRawDogFood"
+            android:exported="false" />
+<activity
+            android:name=".AdminRegister"
+            android:exported="false" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".PlaceOrderFreezeDriedDogFood"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderSupplements"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderPuppyFood"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderKibblesandBits"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceOrderWetDogFood"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRegister"
+
             android:exported="false">
 
             <!-- <intent-filter> -->
@@ -28,6 +61,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
+
             android:name=".RawFood"
             android:exported="false" />
         <activity
@@ -51,6 +85,16 @@
         <activity
             android:name=".AddProduct"
             android:exported="false" />
+
+            android:name=".AddProduct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".OrderDetails"
             android:exported="false" />
@@ -83,6 +127,20 @@
             android:exported="false" />
         <activity
             android:name=".Signup"
+
+
+            android:exported="false">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".MainActivity"
+
             android:exported="false" />
     </application>
 
