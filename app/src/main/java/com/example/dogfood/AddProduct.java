@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,9 +16,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 public class AddProduct extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
+
+    private Uri imageUri;
+    private ImageView productImage;
+    private Button selectImageButton;
+
     private static final String DATABASE_NAME = "DogFood.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -47,6 +54,7 @@ public class AddProduct extends AppCompatActivity {
     private Button selectImageButton, submitProductButton;
     private EditText productName, productDescription, productPrice, productBrand, productQuantity;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +62,10 @@ public class AddProduct extends AppCompatActivity {
 
         productImage = findViewById(R.id.productImage);
         selectImageButton = findViewById(R.id.selectImageButton);
+
+
+        selectImageButton.setOnClickListener(v -> openImageChooser());
+
         submitProductButton = findViewById(R.id.submitProductButton);
         productName = findViewById(R.id.productName);
         productDescription = findViewById(R.id.productDescription);
@@ -67,6 +79,7 @@ public class AddProduct extends AppCompatActivity {
 
         selectImageButton.setOnClickListener(v -> openImageChooser());
         submitProductButton.setOnClickListener(v -> addProductToDatabase());
+
     }
 
     private void openImageChooser() {
@@ -82,6 +95,8 @@ public class AddProduct extends AppCompatActivity {
             imageUri = data.getData();
             productImage.setImageURI(imageUri);
         }
+
+
     }
 
     private void addProductToDatabase() {
@@ -114,5 +129,6 @@ public class AddProduct extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Error adding product", Toast.LENGTH_SHORT).show();
         }
+
     }
 }

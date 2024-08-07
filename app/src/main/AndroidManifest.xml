@@ -13,6 +13,15 @@
         android:theme="@style/Theme.DogFood"
         tools:targetApi="31">
         <activity
+]
+            android:name=".NewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_new"
+            android:theme="@style/Theme.DogFood" />
+        <!-- Activities -->
+        <activity
+            android:name=".MainActivity"
+
 
             android:name=".PlaceOrderRawDogFood"
             android:exported="false" />
@@ -43,16 +52,40 @@
             android:exported="false" />
         <activity
             android:name=".AdminRegister"
+
             android:exported="false">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
         <activity
+
+            android:name=".RawFood"
+            android:exported="false" />
+        <activity
+            android:name=".Freeze"
+            android:exported="false" />
+        <activity
+            android:name=".Supplements"
+            android:exported="false" />
+        <activity
+            android:name=".puppyf"
+            android:exported="false" />
+        <activity
+            android:name=".Kibbles"
+            android:exported="false" />
+        <activity
+            android:name=".wetdog"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRegister"
+            android:exported="false" />
+        <activity
+            android:name=".AddProduct"
+            android:exported="false" />
+
             android:name=".AddProduct"
             android:exported="true">
             <intent-filter>
@@ -61,17 +94,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".OrderDetails"
-            android:exported="false">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".PlacedOrder"
             android:exported="false" />
@@ -80,32 +106,29 @@
             android:exported="false" />
         <activity
             android:name=".SelectCategory"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".FrogetPassword"
             android:exported="false" />
         <activity
             android:name=".AdminSetting"
-            android:exported="false">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".AdminOrder"
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="true">
-            <intent-filter>-->
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Signup"
+
+
             android:exported="false">
 
             <!-- <intent-filter> -->
@@ -117,6 +140,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
+
             android:exported="false" />
     </application>
 
