@@ -113,4 +113,51 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d("DBHelper", "Authenticate User - Username: " + username + ", Authenticated: " + isAuthenticated);
         return isAuthenticated;
     }
+
+    // Method to register a new admin
+    public boolean registerAdmin(String emailOrPhone, String fullName, String username, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Check if email or phone number already exists
+        if (isEmailOrPhoneExists(emailOrPhone)) {
+            Toast.makeText(context, "This email or phone number is already registered.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_EMAIL_PHONE, emailOrPhone.trim());
+        values.put(COLUMN_FULL_NAME, fullName.trim());
+        values.put(COLUMN_USERNAME, username.trim());
+        values.put(COLUMN_PASSWORD, password.trim());
+        values.put(COLUMN_ROLE, "admin"); // Set role as 'admin'
+
+        // Insert row
+        long result = db.insert(TABLE_USERS, null, values);
+
+        // Check if insert was successful
+        if (result == -1) {
+            Toast.makeText(context, "Registration failed!", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            Toast.makeText(context, "Admin registration successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+    }
+
+    // Method to check if user is admin
+    public boolean isAdmin(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COLUMN_ROLE};
+        String selection = COLUMN_USERNAME + "=?";
+        String[] selectionArgs = {username.trim()};
+
+        Cursor cursor = db.query(TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            String role = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_ROLE));
+            cursor.close();
+            return "admin".equals(role);
+        }
+        return false;
+    }
+
 }
