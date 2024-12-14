@@ -1,6 +1,5 @@
 package com.example.dogfood;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Signup extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AdminRegister extends AppCompatActivity {
 
     private EditText emailOrPhoneEditText;
     private EditText fullNameEditText;
@@ -18,23 +19,23 @@ public class Signup extends AppCompatActivity {
     private EditText passwordEditText;
     private Button signUpButton;
     private ProgressBar progressBar;
-    private TextView loginPrompt; // Add this line
+    private TextView loginPrompt;
 
     private DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_admin_register);
 
         // Initialize views
-        emailOrPhoneEditText = findViewById(R.id.email_or_phone);
-        fullNameEditText = findViewById(R.id.fullname);
-        usernameEditText = findViewById(R.id.username);
-        passwordEditText = findViewById(R.id.password);
-        signUpButton = findViewById(R.id.btnSignup);
-        progressBar = findViewById(R.id.LProgressBar);
-        loginPrompt = findViewById(R.id.tvSignUpPrompt); // Initialize the TextView
+        emailOrPhoneEditText = findViewById(R.id.email_or_phone_admin);
+        fullNameEditText = findViewById(R.id.fullname_admin);
+        usernameEditText = findViewById(R.id.username_admin);
+        passwordEditText = findViewById(R.id.password_admin);
+        signUpButton = findViewById(R.id.btnAdminSignup);
+        progressBar = findViewById(R.id.LProgressBarAdmin);
+        loginPrompt = findViewById(R.id.have_account_admin);
 
         // Initialize DBHelper
         dbHelper = new DBHelper(this);
@@ -45,36 +46,35 @@ public class Signup extends AppCompatActivity {
             public void onClick(View v) {
                 String emailOrPhone = emailOrPhoneEditText.getText().toString().trim();
                 String fullName = fullNameEditText.getText().toString().trim();
-
                 String username = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
                 // Validate input
                 if (emailOrPhone.isEmpty() || fullName.isEmpty() || username.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(Signup.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminRegister.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 // Show progress bar while processing
                 progressBar.setVisibility(View.VISIBLE);
 
-                // Register the user
-                boolean isRegistered = dbHelper.registerUser(emailOrPhone, fullName, username, password);
+                // Register the admin
+                boolean isRegistered = dbHelper.registerAdmin(emailOrPhone, fullName, username, password);
 
                 // Hide progress bar
                 progressBar.setVisibility(View.GONE);
 
                 if (isRegistered) {
                     // Registration successful
-                    Toast.makeText(Signup.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminRegister.this, "Admin registration successful!", Toast.LENGTH_SHORT).show();
 
-                    // Navigate to Login activity
-                    Intent intent = new Intent(Signup.this, Login.class);
+                    // Navigate to AdminSettings activity
+                    Intent intent = new Intent(AdminRegister.this, AdminSetting.class);
                     startActivity(intent);
-                    finish(); // Optional: finish the signup activity
+                    finish(); // Optional: finish the admin register activity
                 } else {
                     // Registration failed
-                    Toast.makeText(Signup.this, "Registration failed. Try again.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminRegister.this, "Registration failed. Try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -84,9 +84,9 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to Login activity
-                Intent intent = new Intent(Signup.this, Login.class);
+                Intent intent = new Intent(AdminRegister.this, Login.class);
                 startActivity(intent);
-                finish(); // Optional: finish the signup activity
+                finish(); // Optional: finish the admin register activity
             }
         });
     }
